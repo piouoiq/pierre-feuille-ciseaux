@@ -14,3 +14,21 @@ function getHumanChoice() {
 console.log("Choix de l'humain :", getHumanChoice());
 let humanScore = 0;
 let computerScore = 0;
+function playRound(humanChoice, computerChoice) {
+   humanChoice = humanChoice.toLowerCase();
+
+  if (humanChoice === computerChoice) {
+    console.log("Égalité ! Vous avez tous les deux choisi " + humanChoice);
+  } else if (
+    (humanChoice === "pierre" && computerChoice === "ciseaux") ||
+    (humanChoice === "papier" && computerChoice === "pierre") ||
+    (humanChoice === "ciseaux" && computerChoice === "papier")
+  ) {
+    humanScore++;
+    console.log("Vous gagnez ! " + humanChoice + " bat " + computerChoice);
+  } else {
+    computerScore++;
+    console.log("Vous perdez ! " + computerChoice + " bat " + humanChoice);
+  }
+ console.log(`Score => Humain: ${humanScore} | Ordinateur: ${computerScore}`);
+}
