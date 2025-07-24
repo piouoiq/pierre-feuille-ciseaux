@@ -5,3 +5,4 @@ function getComputerChoice() {
   const randomIndex = Math.floor(Math.random() * choix.length);
   return choix[randomIndex];
 }
+console.log(getComputerChoice());
