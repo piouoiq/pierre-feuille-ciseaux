@@ -30,5 +30,8 @@ function playRound(humanChoice, computerChoice) {
     computerScore++;
     console.log("Vous perdez ! " + computerChoice + " bat " + humanChoice);
   }
- console.log(`Score => Humain: ${humanScore} | Ordinateur: ${computerScore}`);
+ console.log(`Score actuel => Humain: ${humanScore} | Ordinateur: ${computerScore}`);
 }
+const humanSelection = getHumanChoice();      
+const computerSelection = getComputerChoice(); 
+playRound
