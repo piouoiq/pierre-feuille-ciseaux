@@ -12,26 +12,29 @@ function getHumanChoice() {
   return choice;
 }
 console.log("Choix de l'humain :", getHumanChoice());
+
 let humanScore = 0;
 let computerScore = 0;
+
 function playRound(humanChoice, computerChoice) {
-   humanChoice = humanChoice.toLowerCase();
+  humanChoice = humanChoice.toLowerCase();
 
   if (humanChoice === computerChoice) {
-    console.log("Égalité ! Vous avez tous les deux choisi " + humanChoice);
-  } else if (
+    console.log(`Égalité ! Vous avez tous deux choisi ${humanChoice}.`);
+    return;
+  }
+
+  const gagne = (
     (humanChoice === "pierre" && computerChoice === "ciseaux") ||
     (humanChoice === "papier" && computerChoice === "pierre") ||
     (humanChoice === "ciseaux" && computerChoice === "papier")
-  ) {
+  );
+
+  if (gagne) {
     humanScore++;
-    console.log("Vous gagnez ! " + humanChoice + " bat " + computerChoice);
+    console.log(`Bravo ! ${humanChoice} bat ${computerChoice}.`);
   } else {
     computerScore++;
-    console.log("Vous perdez ! " + computerChoice + " bat " + humanChoice);
+    console.log(`Dommage ! ${computerChoice} bat ${humanChoice}.`);
   }
- console.log(`Score actuel => Humain: ${humanScore} | Ordinateur: ${computerScore}`);
 }
-const humanSelection = getHumanChoice();      
-const computerSelection = getComputerChoice(); 
-playRound
