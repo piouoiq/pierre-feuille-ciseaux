@@ -38,3 +38,27 @@ function playRound(humanChoice, computerChoice) {
     console.log(`Dommage ! ${computerChoice} bat ${humanChoice}.`);
   }
 }
+
+function playGame() {
+  humanScore = 0;
+  computerScore = 0;
+
+  for (let i = 1; i <= 5; i++) {
+    console.log(`\n--- Tour ${i} ---`);
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
+    playRound(humanChoice, computerChoice);
+  }
+
+  console.log("\n--- Résultat final ---");
+  console.log(`Score Humain : ${humanScore}`);
+  console.log(`Score Ordinateur : ${computerScore}`);
+
+  if (humanScore > computerScore) {
+    console.log("🎉 Vous avez gagné la partie !");
+  } else if (humanScore < computerScore) {
+    console.log("💻 L'ordinateur a gagné la partie.");
+  } else {
+    console.log("🤝 Match nul !");
+  }
+}
