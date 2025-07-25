@@ -28,7 +28,7 @@ console.log(getComputerChoice())
 
 function getHumanChoice(){
     var humanChoice = prompt("Que veux tu?") // se place hors de la fonction sinon ne fonctionne pas 
-    console.log(humanChoice)
+    console.log(humanChoice.toLowerCase())
 
    }
 console.log(getHumanChoice())
@@ -38,3 +38,14 @@ var humanScore=0
 var computerScore=0
 
 //5
+function playRound(humanChoice, computerChoice) {
+  
+
+
+console.log(humanChoice)
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
