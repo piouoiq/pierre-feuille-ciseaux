@@ -32,3 +32,9 @@ function getHumanChoice(){
 
    }
 console.log(getHumanChoice())
+
+//4
+var humanScore=0
+var computerScore=0
+
+//5
