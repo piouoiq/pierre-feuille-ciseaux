@@ -27,7 +27,7 @@ console.log(getComputerChoice())
 //3
 
 function getHumanChoice(){
-    var humanChoice = prompt("Que veux tu?") // se place hors de la fonction sinon ne fonctionne pas 
+    var humanChoice = prompt("Que choisis tu? (pierre, papier, ciseaux)x") // se place hors de la fonction sinon ne fonctionne pas 
     console.log(humanChoice.toLowerCase())
 
    }
