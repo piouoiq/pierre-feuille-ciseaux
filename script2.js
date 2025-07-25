@@ -25,10 +25,10 @@ return computerChoice
 console.log(getComputerChoice())
 
 //3
-var humanChoice = prompt("Que choisis tu?") // se place hors de la fonction sinon ne fonctionne pas 
+
 function getHumanChoice(){
-    
-    getHumanChoice=humanChoice
+    var humanChoice = prompt("Que veux tu?") // se place hors de la fonction sinon ne fonctionne pas 
+    console.log(humanChoice)
 
    }
-console.lo
+console.log(getHumanChoice())
